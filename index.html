@@ -132,15 +132,21 @@
         <h1>Devenir Membre</h1>
         <p class="desc">Rejoignez l'organisation officielle sur GitHub pour contribuer au projet.</p>
 
-        <form action="#" method="POST">
+        <form action="https://formspree.io/f/mkovboak" method="POST">
+            
+            <div class="form-group">
+                <label for="email">Votre adresse Email</label>
+                <input type="email" id="email" name="email" placeholder="ex: dev@portal.com" required>
+            </div>
+
             <div class="form-group">
                 <label for="github-user">Nom d'utilisateur GitHub</label>
-                <input type="text" id="github-user" name="github-user" placeholder="ex: PortalDev2026" required>
+                <input type="text" id="github-user" name="github-username" placeholder="ex: PortalDev2026" required>
             </div>
 
             <div class="form-group">
                 <label for="role">Quel est votre domaine ?</label>
-                <select id="role" name="role">
+                <select id="role" name="domaine">
                     <option value="mapper">Mapping (Hammer)</option>
                     <option value="coder">Codeur (C++, Squirrel)</option>
                     <option value="writer">Scénariste</option>
@@ -151,8 +157,10 @@
 
             <div class="form-group">
                 <label for="motivation">Pourquoi voulez-vous nous rejoindre ?</label>
-                <textarea id="motivation" name="motivation" rows="4" placeholder="Parlez-nous de vos compétences..." required></textarea>
+                <textarea id="motivation" name="motivation" rows="4" placeholder="Décrivez vos motivations et vos projets passés..." required></textarea>
             </div>
+
+            <input type="hidden" name="_subject" value="Nouvelle candidature : Portal Not a Lie">
 
             <button type="submit" class="btn-submit">Envoyer la demande</button>
         </form>
